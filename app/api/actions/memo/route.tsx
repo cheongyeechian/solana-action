@@ -18,9 +18,9 @@ import {
 export const GET = (req: Request) => {
   const payload: ActionGetResponse = {
     icon: new URL("/solana_devs.jpg", new URL(req.url).origin).toString(),
+    label: "Memo Demo",
     title: "Memo Demo",
     description: "This is a super simple Action",
-    label: "Memo Demo",
   };
   return Response.json(payload, {
     headers: ACTIONS_CORS_HEADERS,
