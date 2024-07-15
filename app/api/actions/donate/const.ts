@@ -15,7 +15,7 @@ export const DEFAULT_RPC =
 
 export const DEFAULT_TITLE = process.env.TITLE ?? "Coffee tips";
 
-export const DEFAULT_AVATOR = process.env.AVATAR;
+export const DEFAULT_AVATAR = process.env.AVATAR;
 
 export const DEFAULT_DESCRIPTION =
   process.env.DESCRIPTION ?? "Thanks for your supporting";
