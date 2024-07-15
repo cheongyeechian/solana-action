@@ -21,8 +21,13 @@ export const GET = (req: Request) => {
     label: "Memo Demo",
     title: "Memo Demo",
     description: "This is a super simple Action",
+
   };
-  return Response.json(payload, {
+
+  // the way action & blink works, there must be a lots of ppl that are interacting and make request from the client, u gonna make sure
+  // your http enpoint for your get post and your options all support the correct headers, in action sdk there is a actions_core_header
+  // these are kind of standard header that will work out of the box to make it. so you can accept those those request to your server
+  return Response.json(payload, { 
     headers: ACTIONS_CORS_HEADERS,
   });
 };
@@ -65,7 +70,8 @@ export const POST = async (req: Request) => {
     transaction.recentBlockhash = (
       await connection.getLatestBlockhash()
     ).blockhash;
-    const payload: ActionPostResponse = await createPostResponse({
+
+    const payload : ActionPostResponse = await createPostResponse({
       fields: {
         transaction,
       },
