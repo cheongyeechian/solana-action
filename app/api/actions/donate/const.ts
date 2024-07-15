@@ -1,5 +1,6 @@
 import { PublicKey, clusterApiUrl } from "@solana/web3.js";
-
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const DEFAULT_SOL_ADDRESS: PublicKey = new PublicKey(
   process.env.RECIPIENT ?? "7J2qom6uYS1sExNZmxVyUbgjG7WQ4KuLe1T3NMDfHbfh" // donate wallet
